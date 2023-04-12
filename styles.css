@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+
+    --Blue: hsl(248, 32%, 49%);
+
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+/*
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+--Red: hsl(0, 100%, 74%) ;
+--Green: hsl(154, 59%, 51%);
+
+### Accent
+
+--Blue: hsl(248, 32%, 49%);
+
+### Neutral
+
+--Dark-Blue: hsl(249, 10%, 26%) ;
+--Grayish-Blue: hsl(246, 25%, 77%);
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 500, 600, 700
+font-family: 'Poppins', sans-serif;
+
+*/
+
+*,
+::after,
+::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(./images/bg-intro-desktop.png), var(--Red);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    display: flex;
+    max-width: 70%;
+    justify-content: space-between;
+    align-items: center;
+    height: 75vh;
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 3rem;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.intro-head{
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 2rem;
+}
+
+.intro-para{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.signup-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    padding-left: 1rem;
+}
+
+.trial{
+    width: 100%;
+    background-color: var(--Blue);
+    text-align: center;
+    color: white;
+    padding: 1rem 0;
+    font-size: 16px;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 8px 0px 0px hsla(249, 10%, 26%,0.3);
+}
+
+.trial p{
+    font-weight: 400;
+}
+
+.trial p span{
+    font-weight: 600;
+}
+
+.signup-container{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 0px 0px hsla(249, 10%, 26%,0.3);
+}
+
+.input-container{
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.error-icon{
+    position: absolute;
+    top: 12px;
+    left: 90%;
+}
+
+input{
+    padding: 1rem 4rem 1rem 1.2rem;
+    border-radius: 0.3rem;
+    border: 1px solid hsla(246, 25%, 77%,0.6);
+    color: var(--Dark-Blue);
+    font-weight: 600;
+    width: 100%;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid var(--Dark-Blue);
+}
+
+.error-message{
+    border: none;
+    width: 100%;
+    text-align: right;
+    font-size: 12px;
+    color: var(--Red);
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.error-icon,
+.error-message{
+    visibility: hidden;
+}
+
+.input-error{
+    border-color: red;
+}
+
+.btn{
+    padding: 1.2rem 1rem 1rem 1rem;
+    background-color: var(--Green);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    box-shadow: 0 3px 0px 0px hsl(154, 57%, 43%);
+    margin-bottom: 1rem;
+}
+
+.btn:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.terms-and-services{
+    font-weight: 400;
+    font-size: 10px;
+    text-align: center;
+    color: var(--Grayish-Blue);
+}
+
+.terms-and-services span{
+    color: var(--Red);
+    font-weight: 700;
+}
+
+/* Responsiveness */
+
+@media (min-width: 1024px) and (max-width: 1439px){
+    main{
+        max-width: 80%;
+    }
+
+    .error-icon{
+        left: 87%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    main{
+        max-width: 90%;
+    }
+
+    .intro{
+        padding-right: 1rem;
+    }
+
+    .intro-head{
+        margin-bottom: 1rem;
+    }
+
+    .trial p{
+        font-size: 14px;
+    }
+
+    .error-icon{
+        left: 85%;
+    }
+}
+
+@media (max-width: 767px){
+    body{
+        margin: 0 2rem;
+        min-height: 100vh;
+    }
+
+    main{
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        min-height: 90vh;
+        max-width: 100%;
+        gap: 2rem;
+    }
+
+    .intro{
+        text-align: center;
+        padding: 0;
+    }
+
+    .intro-head{
+        font-size: 25px;
+        line-height: 34px;
+        margin-bottom: 1rem;
+    }
+
+    .intro-para, .trial p, .signup-container{
+        font-size: 13px;
+    }
+
+    .signup-form{
+        padding: 0;
+        gap: 1.3rem;
+    }
+
+    .signup-container{
+        padding: 1rem;
+    }
+
+    .error-icon{
+        left: 87%;
+    }
+}

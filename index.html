@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+</head>
+
+<body>
+  <main>
+    <section class="intro">
+      <h1 class="intro-head">Learn to code by watching others</h1>
+      <p class="intro-para">See how experienced developers solve problems in real-time. Watching scripted tutorials is
+        great,
+        but understanding how developers think is invaluable. </p>
+    </section>
+    <section class="signup-form">
+      <div class="trial">
+        <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+      </div>
+      <form class="signup-container">
+        <div class="input-container">
+          <img class="error-icon" id="first-name-error-icon" src="./images/icon-error.svg" alt="error svg icon">
+          <input class="first-name" type="text" placeholder="First Name">
+          <p class="error-message" id="first-name-error-message">This is an error message</p>
+        </div>
+        <div class="input-container">
+          <img class="error-icon" id="last-name-error-icon" src="./images/icon-error.svg" alt="error svg icon">
+          <input class="last-name" type="text" placeholder="Last Name">
+          <p class="error-message" id="last-name-error-message">This is an error message</p>
+        </div>
+        <div class="input-container">
+          <img class="error-icon" id="email-error-icon" src="./images/icon-error.svg" alt="error svg icon">
+          <input class="email" type="text" placeholder="Email Address">
+          <p class="error-message" id="email-error-message">This is an error message</p>
+        </div>
+        <div class="input-container">
+          <img class="error-icon" id="password-error-icon" src="./images/icon-error.svg" alt="error svg icon">
+          <input class="password" type="password" placeholder="Password">
+          <p class="error-message" id="password-error-message">This is an error message</p>
+        </div>
+        <button class="btn">Claim your free trial</button>
+        <p class="terms-and-services">By clicking the button, you are agreeing to our <span>Terms and Services</span>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
